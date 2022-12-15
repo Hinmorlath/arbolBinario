@@ -34,10 +34,18 @@ public class BinaryTreeProject {
             System.out.println("Escribe  n  para parar, cualquier otra tecla para ingresar otro dato: ");
             entrada = bufer.readLine();
             respuesta = entrada.charAt(0);
+            
         } while ( respuesta != 'n');
         
         System.out.println("Recorrido del árbol en preorder: ");
         arbol.preorden(arbol.root);
+        
+        System.out.println("Recorrido del árbol en postorden");
+        arbol.postorden();
+        
+        System.out.println("Recorrido del árbol en inorden");
+        arbol.inorden();
+        
     }
     
 }

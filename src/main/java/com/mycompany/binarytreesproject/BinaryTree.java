@@ -41,6 +41,34 @@ public class BinaryTree {
         }
     }
     
+    public void inorden( Node n ){
+        if( n != null ){
+            inorden( n.getLeft() );
+            printDato(n);
+            inorden( n.getRight() );
+        }
+    }
+    
+    public void postorden( Node n ){
+        if( n != null ){
+            postorden( n.getLeft() );
+            postorden( n.getRight() );
+            printDato(n);
+        }
+    }
+    
+    public void preorden() {
+        this.preorden( root );
+    }
+    
+    public void postorden() {
+        this.postorden( root );
+    }
+    
+    public void inorden() {
+        this.inorden( root );
+    }
+    
     public void printDato( Node n ){
         int dato = (Integer) n.getValue();
         System.out.println(dato);
